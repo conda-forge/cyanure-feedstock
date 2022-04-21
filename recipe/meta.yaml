@@ -1,13 +1,12 @@
-{% set version = "0.22.4" %}
-{% set tag = "v0.0.4" %}
+{% set version = "1.0.0" %}
 
 package:
   name: "cyanure"
   version: {{ version }}
 
 source:
-  url: https://github.com/thomasryck/cyanure/archive/{{ tag }}/cyanure-{{ version }}.tar.gz
-  sha256: 1d1cd4eee1de5af1aeb0ec934a60ccd6bb7c42e17526a25a598b596cb48c0e95
+  url: https://github.com/thomasryck/cyanure/archive/{{ version }}/cyanure-{{ version }}.tar.gz
+  sha256: e5bab6277a74adade8c9e952af72b1298d35809de200d6e460078907a6e47820
     
 build:
   number: 0
