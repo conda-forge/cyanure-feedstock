@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/thomasryck/cyanure/archive/{{ version }}/cyanure-{{ version }}.tar.gz
-  sha256: e5bab6277a74adade8c9e952af72b1298d35809de200d6e460078907a6e47820
+  sha256: a35f4c17e909b1740fe520fcb6707de8e95032367f734565eb99d0056b4c958e
     
 build:
   number: 0
