@@ -1,7 +1,7 @@
 About cyanure
 =============
 
-Home: http://thoth.inrialpes.fr/people/mairal/cyanure/welcome.html
+Home: https://inria-thoth.github.io/cyanure/welcome.html
 
 Package license: BSD-3-Clause
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cyanure-feedsto
 
 Summary: A Toolbox for Empirical Risk Minimization
 
-Development: https://github.com/jmairal/cyanure
+Development: https://github.com/inria-thoth/cyanure
 
-Documentation: http://thoth.inrialpes.fr/people/mairal/cyanure/welcome.html
+Documentation: https://inria-thoth.github.io/cyanure/welcome.html
 
 Cyanure is an open-source C++ software package with a Python 3 interface.
 The goal of Cyanure is to provide state-of-the-art solvers
