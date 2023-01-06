@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/inria-thoth/cyanure/tree/debug-ci
+  git_url: https://github.com/inria-thoth/cyanure/tree/debug-ci.git
     
 build:
   number: 3
