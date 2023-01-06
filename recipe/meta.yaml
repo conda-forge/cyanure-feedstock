@@ -5,8 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/thomasryck/cyanure/archive/{{ version }}/cyanure-{{ version }}.tar.gz
-  sha256: a35f4c17e909b1740fe520fcb6707de8e95032367f734565eb99d0056b4c958e
+  git_url: https://github.com/inria-thoth/cyanure/tree/debug-ci
     
 build:
   number: 3
