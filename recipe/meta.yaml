@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
-    - python
+    - python                                 # [build_platform != target_platform]
     - libgomp  # [linux]
     - intel-openmp  # [win]
   host:
