@@ -56,7 +56,7 @@ about:
    Cyanure is an open-source C++ software package with a Python 3 interface. 
    The goal of Cyanure is to provide state-of-the-art solvers 
    for learning linear models, based on stochastic variance-reduced stochastic optimization 
-   with acceleration mechanisms and Quasi-Newton principles.  
+   with acceleration mechanisms and Quasi-Newton principles. 
   dev_url: https://github.com/inria-thoth/cyanure
   doc_url: https://inria-thoth.github.io/cyanure/welcome.html
 
