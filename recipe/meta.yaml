@@ -43,6 +43,7 @@ test:
   requires:
     - pytest
     - pandas
+    - libsvmdata
   commands:
     - pytest
 
