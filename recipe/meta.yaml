@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/inria-thoth/cyanure/releases/download/{{ version }}/cyanure-{{ version }}.tar.gz
-  sha256: f16f3c0243a4b41e510e50b4a427c9afe7d21f9f7e4e296bbdd45a25ce6345ac
+  sha256: f1669e11564aafb869a596a85de94e0eb5ed914c1294d191627547ecd556e225
     
 build:
   number: 0
