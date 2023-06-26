@@ -1,15 +1,15 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: "cyanure"
   version: {{ version }}
 
 source:
-  git_url: https://github.com/inria-thoth/cyanure.git
-  git_tag: debug-ci
+  url: https://github.com/inria-thoth/cyanure/releases/download/{{ version }}/cyanure-{{ version }}.tar.gz
+  sha256: ab0681c3a4379eb57c3dfc79d6284b733d30fbe57f5ba9b1c0ea9501d1481cf9
     
 build:
-  number: 3
+  number: 0
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
