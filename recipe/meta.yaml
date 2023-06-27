@@ -9,18 +9,16 @@ source:
   sha256: f1669e11564aafb869a596a85de94e0eb5ed914c1294d191627547ecd556e225
     
 build:
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - python                              
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
-    - python                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - libgomp  # [linux]
     - intel-openmp  # [win]
   host:
