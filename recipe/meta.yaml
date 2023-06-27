@@ -1,24 +1,25 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: "cyanure"
   version: {{ version }}
 
 source:
-  url: https://github.com/thomasryck/cyanure/archive/{{ version }}/cyanure-{{ version }}.tar.gz
-  sha256: a35f4c17e909b1740fe520fcb6707de8e95032367f734565eb99d0056b4c958e
+  url: https://github.com/inria-thoth/cyanure/releases/download/{{ version }}/cyanure-{{ version }}.tar.gz
+  sha256: f1669e11564aafb869a596a85de94e0eb5ed914c1294d191627547ecd556e225
     
 build:
-  number: 3
+  number: 0
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
-    - python
+    - python                                 # [build_platform != target_platform]
     - libgomp  # [linux]
     - intel-openmp  # [win]
   host:
@@ -42,8 +43,11 @@ test:
   requires:
     - pytest
     - pandas
+    - libsvmdata
   commands:
-    - pytest
+  # VM is too small for tests on Windows
+    - pytest  # [osx]
+    - pytest  # [linux]
 
 about:
   home: https://inria-thoth.github.io/cyanure/welcome.html
@@ -55,7 +59,7 @@ about:
    Cyanure is an open-source C++ software package with a Python 3 interface. 
    The goal of Cyanure is to provide state-of-the-art solvers 
    for learning linear models, based on stochastic variance-reduced stochastic optimization 
-   with acceleration mechanisms and Quasi-Newton principles.
+   with acceleration mechanisms and Quasi-Newton principles. 
   dev_url: https://github.com/inria-thoth/cyanure
   doc_url: https://inria-thoth.github.io/cyanure/welcome.html
 
