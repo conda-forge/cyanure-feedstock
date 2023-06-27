@@ -46,8 +46,8 @@ test:
     - libsvmdata
   commands:
   # VM is too small for tests on Windows
-    - pytest # [osx]
-    - pytest # [linux]
+    - pytest  # [osx]
+    - pytest  # [linux]
 
 about:
   home: https://inria-thoth.github.io/cyanure/welcome.html
