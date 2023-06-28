@@ -27,7 +27,8 @@ requirements:
     - python
     - libblas
     - liblapack
-    - numpy >=1.21.6
+    - numpy <=1.23.5 # [py < 3.11]
+    - numpy >=1.23.5 # [py > 3.10]
     - pip
   run:
     - python
