@@ -16,7 +16,8 @@ build:
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
-    - numpy<=1.23.5                                   # [build_platform != target_platform]
+    - numpy <=1.23.5  # [py < 3.11]
+    - numpy >=1.23.5  # [py > 3.10]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -27,8 +28,8 @@ requirements:
     - python
     - libblas
     - liblapack
-    - numpy<=1.23.5  # [py < 3.11]
-    - numpy>=1.23.5  # [py > 3.10]
+    - numpy <=1.23.5  # [py < 3.11]
+    - numpy >=1.23.5  # [py > 3.10]
     - pip
   run:
     - python
