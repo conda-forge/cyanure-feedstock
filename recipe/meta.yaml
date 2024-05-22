@@ -9,7 +9,7 @@ source:
   sha256: f1669e11564aafb869a596a85de94e0eb5ed914c1294d191627547ecd556e225
     
 build:
-  number: 2
+  number: 3
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
@@ -20,6 +20,7 @@ requirements:
     - numpy >=1.23.5  # [py > 3.10]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
@@ -35,7 +36,6 @@ requirements:
     - python
     - scipy
     - scikit-learn
-    - {{ pin_compatible('numpy') }}
     
 
 test:
