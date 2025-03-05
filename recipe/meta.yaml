@@ -27,6 +27,7 @@ requirements:
     - intel-openmp  # [win]
   host:
     - python
+    - setuptools
     - libblas
     - liblapack
     - numpy <=1.23.5  # [py < 3.11]
