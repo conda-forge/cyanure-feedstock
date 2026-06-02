@@ -48,9 +48,10 @@ test:
     - pandas
     - libsvmdata
   commands:
+  # Skip tests that download external LibSVM datasets (no network in CI).
   # VM is too small for tests on Windows
-    - pytest  # [osx]
-    - pytest  # [linux]
+    - pytest -k "not finance and not rcv1"  # [osx]
+    - pytest -k "not finance and not rcv1"  # [linux]
 
 about:
   home: https://inria-thoth.github.io/cyanure/welcome.html
