@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: "cyanure"
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/inria-thoth/cyanure/releases/download/{{ version }}/cyanure-{{ version }}.tar.gz
-  sha256: f1669e11564aafb869a596a85de94e0eb5ed914c1294d191627547ecd556e225
-    
+  sha256: 870a8c244e1a7143fba6d2ba0214ca636c21c1dbe4a6e69a94c6d08a676a565f
+
 build:
-  number: 3
+  number: 0
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
@@ -37,13 +37,13 @@ requirements:
     - python
     - scipy
     - scikit-learn
-    
+
 
 test:
   imports:
     - cyanure
   source_files:
-   - test/*.py
+    - test/*.py
   requires:
     - pytest
     - pandas
@@ -59,11 +59,11 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: 'A Toolbox for Empirical Risk Minimization'
-  description: | 
-   Cyanure is an open-source C++ software package with a Python 3 interface. 
-   The goal of Cyanure is to provide state-of-the-art solvers 
-   for learning linear models, based on stochastic variance-reduced stochastic optimization 
-   with acceleration mechanisms and Quasi-Newton principles. 
+  description: |
+    Cyanure is an open-source C++ software package with a Python 3 interface. 
+    The goal of Cyanure is to provide state-of-the-art solvers 
+    for learning linear models, based on stochastic variance-reduced stochastic optimization 
+    with acceleration mechanisms and Quasi-Newton principles. 
   dev_url: https://github.com/inria-thoth/cyanure
   doc_url: https://inria-thoth.github.io/cyanure/welcome.html
 
