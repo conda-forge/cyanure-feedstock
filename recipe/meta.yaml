@@ -29,6 +29,7 @@ requirements:
     - setuptools
     - libblas
     - liblapack
+    - openblas  # provides cblas.h headers (setup.py does #include <cblas.h>)
     - numpy
     - pip
   run:
