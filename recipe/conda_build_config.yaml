@@ -1,0 +1,10 @@
+# cyanure's setup.py hardcodes linking against OpenBLAS (-lopenblas), and has no
+# working code path for the netlib/blis BLAS variants. Override the default BLAS
+# variant (netlib in the global pinning) to openblas for all three metapackages
+# so they stay consistent and libopenblas is present to link against.
+libblas:
+  - 3.9.* *openblas
+libcblas:
+  - 3.9.* *openblas
+liblapack:
+  - 3.9.* *openblas
