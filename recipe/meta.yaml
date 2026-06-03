@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: "cyanure"
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/inria-thoth/cyanure/releases/download/{{ version }}/cyanure-{{ version }}.tar.gz
-  sha256: 870a8c244e1a7143fba6d2ba0214ca636c21c1dbe4a6e69a94c6d08a676a565f
+  sha256: 2c0bd3b833278fabf518732c6571fadcad3914dcb2d609b5cb34bc83aeecc441
     
 build:
   number: 0
